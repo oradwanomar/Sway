@@ -25,6 +25,7 @@ class FoodViewController: UIViewController {
         cv.delegate = self
         cv.dataSource = self
         cv.register(FoodTopBannerCollectionViewCell.self, forCellWithReuseIdentifier: FoodTopBannerCollectionViewCell.cellIdentifier)
+        cv.register(FoodCategoryCollectionViewCell.self, forCellWithReuseIdentifier: FoodCategoryCollectionViewCell.cellIdentifier)
         cv.backgroundColor = .systemBackground
         return cv
     }()
@@ -79,9 +80,11 @@ extension FoodViewController {
     func configureCompositionalLayout(){
         let layout = UICollectionViewCompositionalLayout {sectionIndex,enviroment in
             switch sectionIndex {
+            case 0 :
+                return AppLayouts.shared.foodBannerSection()
                 
             default:
-                return AppLayouts.shared.foodBannerSection()
+                return AppLayouts.shared.foodCategorySection()
             }
         }
         collectionView.setCollectionViewLayout(layout, animated: true)
