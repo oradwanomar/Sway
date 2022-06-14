@@ -101,9 +101,8 @@
 		85E435CC2857B8A300052D42 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				85E435DA2857D05000052D42 /* FoodTopBannerCollectionViewCell.swift */,
-				85E435DE285828E300052D42 /* FoodCategoryCollectionViewCell.swift */,
-				85E435E22858377800052D42 /* RestaurantListCollectionViewCell.swift */,
+				85E435E52858518100052D42 /* Headers */,
+				85E435E42858517C00052D42 /* Cells */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -135,6 +134,23 @@
 				85E435D42857C52300052D42 /* UIButton + Extention.swift */,
 			);
 			path = Extentions;
+			sourceTree = "<group>";
+		};
+		85E435E42858517C00052D42 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				85E435DA2857D05000052D42 /* FoodTopBannerCollectionViewCell.swift */,
+				85E435DE285828E300052D42 /* FoodCategoryCollectionViewCell.swift */,
+				85E435E22858377800052D42 /* RestaurantListCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		85E435E52858518100052D42 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Headers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -22,7 +22,7 @@ class RestaurantListCollectionViewCell: UICollectionViewCell {
             restaurantTagLabel.text = cellData.tags
             restaurantLocationLabel.text = cellData.location
             if cellData.isFreeDelivery {
-                offerLabel.attributedText = setOfferAttributedLabel(withTitle: "20% Off", withSubtitle: "upto ₹120")
+                offerLabel.attributedText = setOfferAttributedLabel(withTitle: "20% Off", withSubtitle: "upto ₹140")
                 locationHeightConstrains?.constant = -8
                 benefitHeightConstrains?.constant = 30
                 benefitLabel.text = cellData.benefitDesc.uppercased()
@@ -131,7 +131,7 @@ class RestaurantListCollectionViewCell: UICollectionViewCell {
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
         l.textColor = .orange
-        l.font = UIFont.systemFont(ofSize: 13,weight: .bold)
+        l.font = UIFont.systemFont(ofSize: 11,weight: .bold)
         return l
     }()
     
@@ -200,7 +200,7 @@ class RestaurantListCollectionViewCell: UICollectionViewCell {
             benefitView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -15),
             
             benefitLabel.leadingAnchor.constraint(equalTo: benefitView.leadingAnchor, constant: 5),
-            benefitLabel.trailingAnchor.constraint(equalTo: benefitView.trailingAnchor, constant: -5),
+            benefitLabel.trailingAnchor.constraint(equalTo: benefitView.trailingAnchor, constant: -10),
             benefitLabel.centerYAnchor.constraint(equalTo: benefitView.centerYAnchor),
             
             benefitIcon.trailingAnchor.constraint(equalTo: benefitView.trailingAnchor, constant: -5),

@@ -26,6 +26,7 @@ class FoodViewController: UIViewController {
         cv.dataSource = self
         cv.register(FoodTopBannerCollectionViewCell.self, forCellWithReuseIdentifier: FoodTopBannerCollectionViewCell.cellIdentifier)
         cv.register(FoodCategoryCollectionViewCell.self, forCellWithReuseIdentifier: FoodCategoryCollectionViewCell.cellIdentifier)
+        cv.register(RestaurantListCollectionViewCell.self, forCellWithReuseIdentifier: RestaurantListCollectionViewCell.cellIdentifier)
         cv.backgroundColor = .systemBackground
         return cv
     }()
@@ -82,9 +83,10 @@ extension FoodViewController {
             switch sectionIndex {
             case 0 :
                 return AppLayouts.shared.foodBannerSection()
-                
-            default:
+            case 1 :
                 return AppLayouts.shared.foodCategorySection()
+            default:
+                return AppLayouts.shared.restaurantsListSection()
             }
         }
         collectionView.setCollectionViewLayout(layout, animated: true)
