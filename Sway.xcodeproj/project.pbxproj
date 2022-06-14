@@ -21,6 +21,8 @@
 		85E435DB2857D05000052D42 /* FoodTopBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E435DA2857D05000052D42 /* FoodTopBannerCollectionViewCell.swift */; };
 		85E435DD2858288100052D42 /* FoodCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E435DC2858288100052D42 /* FoodCategoryModel.swift */; };
 		85E435DF285828E300052D42 /* FoodCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E435DE285828E300052D42 /* FoodCategoryCollectionViewCell.swift */; };
+		85E435E12858350700052D42 /* RestaurantListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E435E02858350700052D42 /* RestaurantListModel.swift */; };
+		85E435E32858377800052D42 /* RestaurantListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E435E22858377800052D42 /* RestaurantListCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		85E435DA2857D05000052D42 /* FoodTopBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTopBannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		85E435DC2858288100052D42 /* FoodCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryModel.swift; sourceTree = "<group>"; };
 		85E435DE285828E300052D42 /* FoodCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		85E435E02858350700052D42 /* RestaurantListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListModel.swift; sourceTree = "<group>"; };
+		85E435E22858377800052D42 /* RestaurantListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 			children = (
 				85E435DA2857D05000052D42 /* FoodTopBannerCollectionViewCell.swift */,
 				85E435DE285828E300052D42 /* FoodCategoryCollectionViewCell.swift */,
+				85E435E22858377800052D42 /* RestaurantListCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -109,6 +114,7 @@
 				85E435D62857CC3D00052D42 /* AppLayouts.swift */,
 				85E435D82857CFC100052D42 /* FoodTopBannerModel.swift */,
 				85E435DC2858288100052D42 /* FoodCategoryModel.swift */,
+				85E435E02858350700052D42 /* RestaurantListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,6 +210,7 @@
 			files = (
 				85E435DB2857D05000052D42 /* FoodTopBannerCollectionViewCell.swift in Sources */,
 				85E435BC2857B88900052D42 /* FoodViewController.swift in Sources */,
+				85E435E12858350700052D42 /* RestaurantListModel.swift in Sources */,
 				85E435B82857B88900052D42 /* AppDelegate.swift in Sources */,
 				85E435D52857C52300052D42 /* UIButton + Extention.swift in Sources */,
 				85E435D32857C1FE00052D42 /* UIView + Extention.swift in Sources */,
@@ -211,6 +218,7 @@
 				85E435BA2857B88900052D42 /* SceneDelegate.swift in Sources */,
 				85E435DF285828E300052D42 /* FoodCategoryCollectionViewCell.swift in Sources */,
 				85E435D92857CFC100052D42 /* FoodTopBannerModel.swift in Sources */,
+				85E435E32858377800052D42 /* RestaurantListCollectionViewCell.swift in Sources */,
 				85E435D02857BD7F00052D42 /* FoodVC+Extention.swift in Sources */,
 				85E435D72857CC3D00052D42 /* AppLayouts.swift in Sources */,
 			);
