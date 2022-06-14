@@ -16,7 +16,22 @@ class RestaurantListCollectionViewCell: UICollectionViewCell {
     var cellData : RestaurantListModel? {
         didSet {
             guard let cellData = cellData else {return}
-            print(cellData)
+            restaurantName.text = cellData.restaurantName
+            restaurantImgCover.image = UIImage(named: cellData.restaurantCoverImage)
+            restaurantInfoLabel.attributedText = setRestaurantInfoLabel(withRating: cellData.rating, withTime: "\(cellData.time) mins", withDesc: cellData.description)
+            restaurantTagLabel.text = cellData.tags
+            restaurantLocationLabel.text = cellData.location
+            if cellData.isFreeDelivery {
+                offerLabel.attributedText = setOfferAttributedLabel(withTitle: "20% Off", withSubtitle: "upto ₹120")
+                locationHeightConstrains?.constant = -8
+                benefitHeightConstrains?.constant = 30
+                benefitLabel.text = cellData.benefitDesc.uppercased()
+            } else {
+                offerLabel.attributedText = setOfferAttributedLabel(withTitle: "50% Off", withSubtitle: "upto ₹120")
+                locationHeightConstrains?.constant = -30
+                benefitHeightConstrains?.constant = 0
+                benefitLabel.text = ""
+            }
         }
     }
     
@@ -165,9 +180,69 @@ class RestaurantListCollectionViewCell: UICollectionViewCell {
             offerView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8),
             offerView.heightAnchor.constraint(equalToConstant: 32),
             
+            restaurantName.leadingAnchor.constraint(equalTo: restaurantImageCard.trailingAnchor, constant: 15),
+            restaurantName.trailingAnchor.constraint(equalTo: trailingAnchor),
+            restaurantName.bottomAnchor.constraint(equalTo: restaurantInfoLabel.topAnchor, constant: -3),
             
+            restaurantInfoLabel.leadingAnchor.constraint(equalTo: restaurantImageCard.trailingAnchor, constant: 15),
+            restaurantInfoLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
+            restaurantInfoLabel.bottomAnchor.constraint(equalTo: restaurantTagLabel.topAnchor, constant: -5),
+            
+            restaurantTagLabel.leadingAnchor.constraint(equalTo: restaurantImageCard.trailingAnchor, constant: 15),
+            restaurantTagLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
+            restaurantTagLabel.bottomAnchor.constraint(equalTo: restaurantLocationLabel.topAnchor, constant: -8),
+            
+            restaurantLocationLabel.leadingAnchor.constraint(equalTo: restaurantImageCard.trailingAnchor, constant: 15),
+            restaurantLocationLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
+            
+            benefitView.leadingAnchor.constraint(equalTo: restaurantImageCard.trailingAnchor, constant: 15),
+            benefitView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            benefitView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -15),
+            
+            benefitLabel.leadingAnchor.constraint(equalTo: benefitView.leadingAnchor, constant: 5),
+            benefitLabel.trailingAnchor.constraint(equalTo: benefitView.trailingAnchor, constant: -5),
+            benefitLabel.centerYAnchor.constraint(equalTo: benefitView.centerYAnchor),
+            
+            benefitIcon.trailingAnchor.constraint(equalTo: benefitView.trailingAnchor, constant: -5),
+            benefitIcon.centerYAnchor.constraint(equalTo: benefitView.centerYAnchor),
+            benefitIcon.widthAnchor.constraint(equalToConstant: 40),
+            benefitIcon.heightAnchor.constraint(equalToConstant: 25)
         ])
         
+        benefitHeightConstrains = benefitView.heightAnchor.constraint(equalToConstant: 30)
+        benefitHeightConstrains?.isActive = true
+        
+        locationHeightConstrains = restaurantLocationLabel.bottomAnchor.constraint(equalTo: benefitView.topAnchor, constant: -8)
+        locationHeightConstrains?.isActive = true
+        
+    }
+    
+    
+    func setOfferAttributedLabel(withTitle title: String, withSubtitle subtitle: String) -> NSAttributedString {
+        let attributedText = NSMutableAttributedString(attributedString: NSAttributedString(string: title.uppercased(), attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13,weight: .bold) , NSAttributedString.Key.foregroundColor: UIColor.orange]))
+        attributedText.append(NSAttributedString(string: "\n• \(subtitle) •".uppercased(), attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 7,weight: .regular) , NSAttributedString.Key.foregroundColor: UIColor.orange]))
+        return attributedText
+    }
+    
+    func setRestaurantInfoLabel(withRating rating: Float, withTime time: String , withDesc desc: String) -> NSAttributedString {
+        let attributedText = NSMutableAttributedString(string:"")
+        
+        let fontSize = 13.0
+        let fontColor = UIColor.darkGray
+        let font = UIFont.systemFont(ofSize: fontSize,weight: .regular)
+        
+        // Star Icon
+        let starImg = UIImage(systemName: "star.fill")?.withRenderingMode(.alwaysTemplate)
+        let starImage = NSTextAttachment()
+        starImage.image = starImg?.withTintColor(fontColor)
+        starImage.bounds = CGRect(x: 0, y: (font.capHeight - fontSize).rounded() / 2, width: fontSize, height: fontSize)
+        starImage.setImageHeight(height: fontSize)
+        let imgString = NSAttributedString(attachment: starImage)
+        attributedText.append(imgString)
+        
+        attributedText.append(NSAttributedString(string: "  \(rating)  •  \(time)  •  \(desc)" , attributes:[NSAttributedString.Key.font: font , NSAttributedString.Key.foregroundColor: fontColor]))
+        
+        return attributedText
     }
     
     required init?(coder: NSCoder) {
