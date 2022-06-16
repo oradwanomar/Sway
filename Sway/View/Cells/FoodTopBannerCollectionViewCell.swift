@@ -25,7 +25,7 @@ class FoodTopBannerCollectionViewCell: UICollectionViewCell {
     let bannerImage : UIImageView = {
         let bI = UIImageView()
         bI.translatesAutoresizingMaskIntoConstraints = false
-        bI.backgroundColor = .clear
+        bI.backgroundColor = .systemBackground
         bI.clipsToBounds = true
         bI.contentMode = .scaleAspectFill
         bI.layer.cornerRadius = 10

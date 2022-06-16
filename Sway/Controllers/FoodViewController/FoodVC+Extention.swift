@@ -44,5 +44,59 @@ extension FoodViewController : UICollectionViewDelegate,UICollectionViewDataSour
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        if kind == "Header" {
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: FilterHeaderView.headerIdentifier, for: indexPath) as! FilterHeaderView
+            header.delegate = self
+            return header
+        }else {
+            let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: DividerFooterView.footerIdentifier, for: indexPath) as! DividerFooterView
+            
+            return footer
+        }
+
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? FoodTopBannerCollectionViewCell {
+            UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveEaseIn) {
+                cell.bannerImage.transform = .init(scaleX: 0.95, y: 0.95)
+            }
+        }
+        
+        if let cell = collectionView.cellForItem(at: indexPath) as? RestaurantListCollectionViewCell {
+            UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveEaseIn) {
+                cell.restaurantImgCover.transform = .init(scaleX: 0.95, y: 0.95)
+                cell.offerView.transform = .init(scaleX: 0.95, y: 0.95)
+            }
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? FoodTopBannerCollectionViewCell {
+            UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveEaseIn) {
+                cell.bannerImage.transform = .identity
+            }
+        }
+        
+        if let cell = collectionView.cellForItem(at: indexPath) as? RestaurantListCollectionViewCell {
+            UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveEaseIn) {
+                cell.restaurantImgCover.transform = .identity
+                cell.offerView.transform = .identity
+            }
+        }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offestY = scrollView.contentOffset.y
+        if abs(offestY) > 350 {
+            filterHeaderView.isHidden = false
+            filterHeaderView.isSticky = true
+        }else {
+            filterHeaderView.isHidden = true
+            filterHeaderView.isSticky = false
+        }
+    }
+    
     
 }

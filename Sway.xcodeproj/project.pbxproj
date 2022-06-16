@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		858E14A9285AF54A00E1C1E1 /* FilterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858E14A8285AF54A00E1C1E1 /* FilterHeaderView.swift */; };
 		85E435B82857B88900052D42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E435B72857B88900052D42 /* AppDelegate.swift */; };
 		85E435BA2857B88900052D42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E435B92857B88900052D42 /* SceneDelegate.swift */; };
 		85E435BC2857B88900052D42 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E435BB2857B88900052D42 /* FoodViewController.swift */; };
@@ -23,9 +24,12 @@
 		85E435DF285828E300052D42 /* FoodCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E435DE285828E300052D42 /* FoodCategoryCollectionViewCell.swift */; };
 		85E435E12858350700052D42 /* RestaurantListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E435E02858350700052D42 /* RestaurantListModel.swift */; };
 		85E435E32858377800052D42 /* RestaurantListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E435E22858377800052D42 /* RestaurantListCollectionViewCell.swift */; };
+		85F053E2285B064D00A4D5BC /* DividerFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F053E1285B064D00A4D5BC /* DividerFooterView.swift */; };
+		85F053E4285B0A6200A4D5BC /* SectionDecorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F053E3285B0A6200A4D5BC /* SectionDecorationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		858E14A8285AF54A00E1C1E1 /* FilterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHeaderView.swift; sourceTree = "<group>"; };
 		85E435B42857B88900052D42 /* Sway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85E435B72857B88900052D42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85E435B92857B88900052D42 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +48,8 @@
 		85E435DE285828E300052D42 /* FoodCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		85E435E02858350700052D42 /* RestaurantListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListModel.swift; sourceTree = "<group>"; };
 		85E435E22858377800052D42 /* RestaurantListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListCollectionViewCell.swift; sourceTree = "<group>"; };
+		85F053E1285B064D00A4D5BC /* DividerFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerFooterView.swift; sourceTree = "<group>"; };
+		85F053E3285B0A6200A4D5BC /* SectionDecorationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDecorationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +155,9 @@
 		85E435E52858518100052D42 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				858E14A8285AF54A00E1C1E1 /* FilterHeaderView.swift */,
+				85F053E1285B064D00A4D5BC /* DividerFooterView.swift */,
+				85F053E3285B0A6200A4D5BC /* SectionDecorationView.swift */,
 			);
 			path = Headers;
 			sourceTree = "<group>";
@@ -227,6 +236,7 @@
 				85E435DB2857D05000052D42 /* FoodTopBannerCollectionViewCell.swift in Sources */,
 				85E435BC2857B88900052D42 /* FoodViewController.swift in Sources */,
 				85E435E12858350700052D42 /* RestaurantListModel.swift in Sources */,
+				858E14A9285AF54A00E1C1E1 /* FilterHeaderView.swift in Sources */,
 				85E435B82857B88900052D42 /* AppDelegate.swift in Sources */,
 				85E435D52857C52300052D42 /* UIButton + Extention.swift in Sources */,
 				85E435D32857C1FE00052D42 /* UIView + Extention.swift in Sources */,
@@ -235,7 +245,9 @@
 				85E435DF285828E300052D42 /* FoodCategoryCollectionViewCell.swift in Sources */,
 				85E435D92857CFC100052D42 /* FoodTopBannerModel.swift in Sources */,
 				85E435E32858377800052D42 /* RestaurantListCollectionViewCell.swift in Sources */,
+				85F053E2285B064D00A4D5BC /* DividerFooterView.swift in Sources */,
 				85E435D02857BD7F00052D42 /* FoodVC+Extention.swift in Sources */,
+				85F053E4285B0A6200A4D5BC /* SectionDecorationView.swift in Sources */,
 				85E435D72857CC3D00052D42 /* AppLayouts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

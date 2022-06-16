@@ -36,7 +36,7 @@ class FoodCategoryCollectionViewCell: UICollectionViewCell {
         catLabel.font = UIFont.systemFont(ofSize: 10,weight: .light)
         catLabel.numberOfLines = 2
         catLabel.textAlignment = .center
-        catLabel.textColor = .black.withAlphaComponent(0.7)
+        catLabel.textColor = .label.withAlphaComponent(0.8)
         return catLabel
     }()
     

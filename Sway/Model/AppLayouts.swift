@@ -38,6 +38,9 @@ class AppLayouts {
         section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 0)
         section.orthogonalScrollingBehavior = .continuous
         
+//        let decorationItem = NSCollectionLayoutDecorationItem.background(elementKind: "SectionBackground")
+//        section.decorationItems = [decorationItem]
+        
         return section
     }
     
@@ -51,6 +54,12 @@ class AppLayouts {
         
         let section = NSCollectionLayoutSection(group: group)
         section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 15)
+        
+        section.boundarySupplementaryItems = [
+            .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(30)), elementKind: "Header", alignment: .top),
+            .init(layoutSize: .init(widthDimension: .fractionalWidth(0.5), heightDimension: .absolute(2)), elementKind: "Footer", alignment: .bottom)
+            
+        ]
         
         return section
     }

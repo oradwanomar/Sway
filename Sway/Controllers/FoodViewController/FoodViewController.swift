@@ -18,6 +18,14 @@ class FoodViewController: UIViewController {
         return nv
     }()
     
+    lazy var filterHeaderView: FilterHeaderView = {
+        let filter = FilterHeaderView()
+        filter.translatesAutoresizingMaskIntoConstraints = false
+        filter.isHidden = true
+        filter.delegate = self
+        return filter
+    }()
+    
     lazy var collectionView : UICollectionView = {
         let cv = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout.init())
         cv.translatesAutoresizingMaskIntoConstraints = false
@@ -27,6 +35,9 @@ class FoodViewController: UIViewController {
         cv.register(FoodTopBannerCollectionViewCell.self, forCellWithReuseIdentifier: FoodTopBannerCollectionViewCell.cellIdentifier)
         cv.register(FoodCategoryCollectionViewCell.self, forCellWithReuseIdentifier: FoodCategoryCollectionViewCell.cellIdentifier)
         cv.register(RestaurantListCollectionViewCell.self, forCellWithReuseIdentifier: RestaurantListCollectionViewCell.cellIdentifier)
+        
+        cv.register(FilterHeaderView.self, forSupplementaryViewOfKind: "Header", withReuseIdentifier: FilterHeaderView.headerIdentifier)
+        cv.register(DividerFooterView.self, forSupplementaryViewOfKind: "Footer", withReuseIdentifier: DividerFooterView.footerIdentifier)
         cv.backgroundColor = .systemBackground
         return cv
     }()
@@ -61,6 +72,7 @@ class FoodViewController: UIViewController {
         view.backgroundColor = .systemBackground
         view.addSubview(navigationView)
         view.addSubview(collectionView)
+        view.addSubview(filterHeaderView)
     }
     
     func setUpConstrains(){
@@ -70,6 +82,11 @@ class FoodViewController: UIViewController {
             navigationView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             navigationView.topAnchor.constraint(equalTo: view.topAnchor, constant: -(windowConstant.getTopPadding + 64)),
             navigationView.heightAnchor.constraint(equalToConstant: windowConstant.getTopPadding + 64),
+            
+            filterHeaderView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            filterHeaderView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            filterHeaderView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            filterHeaderView.heightAnchor.constraint(equalToConstant: 45),
         ])
     }
 
@@ -89,6 +106,15 @@ extension FoodViewController {
                 return AppLayouts.shared.restaurantsListSection()
             }
         }
+        layout.register(SectionDecorationView.self, forDecorationViewOfKind: "SectionBackground")
         collectionView.setCollectionViewLayout(layout, animated: true)
     }
+}
+
+extension FoodViewController: FilterActionDelegate {
+    func didTabFilterBTN() {
+        print("Open Filter")
+    }
+    
+    
 }
