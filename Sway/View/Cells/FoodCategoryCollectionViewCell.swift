@@ -9,6 +9,8 @@ import UIKit
 
 class FoodCategoryCollectionViewCell: UICollectionViewCell {
     
+    
+    
     static let cellIdentifier = "FoodCategoryCollectionViewCell"
     
     var cellData : FoodCategoryModel? {
