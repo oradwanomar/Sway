@@ -29,6 +29,7 @@ class FoodTopBannerCollectionViewCell: UICollectionViewCell {
         bI.clipsToBounds = true
         bI.contentMode = .scaleAspectFill
         bI.layer.cornerRadius = 8
+        
         return bI
     }()
     
