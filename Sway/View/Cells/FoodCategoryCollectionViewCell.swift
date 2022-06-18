@@ -55,6 +55,7 @@ class FoodCategoryCollectionViewCell: UICollectionViewCell {
     }
     
     func configureConstrains(){
+        
         NSLayoutConstraint.activate([
             categoryImgView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 3),
             categoryImgView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -3),
