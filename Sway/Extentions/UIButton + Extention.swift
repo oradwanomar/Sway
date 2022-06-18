@@ -29,6 +29,7 @@ extension UIButton {
             Img = (UIImage(named: btnImage)?.withRenderingMode(.alwaysTemplate).withTintColor(imageColor))!
         }
         let Image = NSTextAttachment()
+        
         Image.image = Img
         Image.bounds = CGRect(x: 0, y: (font.capHeight - imageSize).rounded() / 2, width: imageSize, height: imageSize)
         Image.setImageHeight(height: imageSize)
