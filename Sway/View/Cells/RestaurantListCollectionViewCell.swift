@@ -149,6 +149,7 @@ class RestaurantListCollectionViewCell: UICollectionViewCell {
         
         addSubview(offerView)
         offerView.addSubview(offerLabel)
+        
         addSubview(restaurantName)
         addSubview(restaurantInfoLabel)
         addSubview(restaurantTagLabel)
