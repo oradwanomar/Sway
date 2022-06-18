@@ -41,6 +41,7 @@ class FilterHeaderView: UICollectionReusableView {
     
     lazy var allRestaurants : UILabel = {
         let label = UILabel()
+        
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .label.withAlphaComponent(0.8)
         label.text = "All Restaurants".uppercased()
