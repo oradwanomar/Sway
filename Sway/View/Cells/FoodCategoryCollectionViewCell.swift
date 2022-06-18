@@ -9,7 +9,7 @@ import UIKit
 
 class FoodCategoryCollectionViewCell: UICollectionViewCell {
     
-    
+    //MARK: Properities
     
     static let cellIdentifier = "FoodCategoryCollectionViewCell"
     
