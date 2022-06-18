@@ -146,6 +146,7 @@ class RestaurantListCollectionViewCell: UICollectionViewCell {
     func configure(){
         addSubview(restaurantImageCard)
         restaurantImageCard.addSubview(restaurantImgCover)
+        
         addSubview(offerView)
         offerView.addSubview(offerLabel)
         addSubview(restaurantName)
