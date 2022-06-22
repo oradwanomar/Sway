@@ -33,7 +33,7 @@ class FoodTopBannerCollectionViewCell: UICollectionViewCell {
         offer.layer.shadowOffset = CGSize(width: 0, height: 4)
         offer.layer.shadowOpacity = 1
         offer.layer.shadowRadius = 5
-    
+
         return offer
     }()
     
