@@ -161,7 +161,7 @@ class RestaurantListCollectionViewCell: UICollectionViewCell {
         benefitView.addSubview(benefitLabel)
         
         DispatchQueue.main.asyncAfter(deadline: .now()) { [self] in
-            gradientView.setGradient(withColors: [UIColor.white.withAlphaComponent(0).cgColor, UIColor.orange.withAlphaComponent(0.2).cgColor], startPoint: CGPoint(x: 0.0, y: 1.0), endPoint: CGPoint(x: 1.0, y: 1.0))
+            gradientView.setGradient(withColors: [UIColor.white.withAlphaComponent(0).cgColor, UIColor.orange.withAlphaComponent(0.3).cgColor], startPoint: CGPoint(x: 0.0, y: 1.0), endPoint: CGPoint(x: 1.0, y: 1.0))
         }
         
     }
