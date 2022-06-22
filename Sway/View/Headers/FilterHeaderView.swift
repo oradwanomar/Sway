@@ -17,7 +17,6 @@ class FilterHeaderView: UICollectionReusableView {
     
     static let headerIdentifier = "FilterHeaderView"
     
-    
     var leadingConstraints: NSLayoutConstraint?
     var trailingConstraints: NSLayoutConstraint?
     weak var delegate: FilterActionDelegate?
