@@ -73,7 +73,7 @@ extension FoodViewController : UICollectionViewDelegate,UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
-    
+
         if let cell = collectionView.cellForItem(at: indexPath) as? FoodTopBannerCollectionViewCell {
             UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveEaseIn) {
                 cell.bannerImage.transform = .identity
