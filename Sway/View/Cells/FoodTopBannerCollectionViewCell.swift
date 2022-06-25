@@ -25,7 +25,7 @@ class FoodTopBannerCollectionViewCell: UICollectionViewCell {
     lazy var shadowView: UIView = {
         let shadowView = UIView()
         shadowView.translatesAutoresizingMaskIntoConstraints = false
-        shadowView.backgroundColor = .systemBackground
+        shadowView.backgroundColor = .clear
         shadowView.layer.cornerRadius = 8
         shadowView.layer.borderWidth = 0.6
         shadowView.layer.borderColor = UIColor.gray.withAlphaComponent(0.3).cgColor
