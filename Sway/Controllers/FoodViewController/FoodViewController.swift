@@ -74,7 +74,7 @@ class FoodViewController: UIViewController {
         view.addSubview(collectionView)
         view.addSubview(filterHeaderView)
     }
-    
+
     
     func setUpConstrains(){
         collectionView.setUp(to: view)
