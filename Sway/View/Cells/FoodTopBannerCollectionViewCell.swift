@@ -49,6 +49,7 @@ class FoodTopBannerCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         configure()
     }
     
