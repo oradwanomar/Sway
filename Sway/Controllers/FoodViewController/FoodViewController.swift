@@ -75,6 +75,7 @@ class FoodViewController: UIViewController {
         view.addSubview(filterHeaderView)
     }
     
+    
     func setUpConstrains(){
         collectionView.setUp(to: view)
         NSLayoutConstraint.activate([
