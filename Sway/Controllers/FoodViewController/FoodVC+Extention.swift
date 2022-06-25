@@ -89,7 +89,7 @@ extension FoodViewController : UICollectionViewDelegate,UICollectionViewDataSour
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offestY = scrollView.contentOffset.y
-        if abs(offestY) > 351 {
+        if abs(offestY) > 350 {
             filterHeaderView.isHidden = false
             filterHeaderView.isSticky = true
         }else {
