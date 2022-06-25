@@ -26,6 +26,7 @@ class FilterHeaderView: UICollectionReusableView {
             guard let isSticky = isSticky else {
                 return
             }
+            
             if isSticky {
                 divider.isHidden = false
                 leadingConstraints?.constant = 17
