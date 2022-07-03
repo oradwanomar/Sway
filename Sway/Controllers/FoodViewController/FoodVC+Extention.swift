@@ -40,6 +40,7 @@ extension FoodViewController : UICollectionViewDelegate,UICollectionViewDataSour
         default:
            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RestaurantListCollectionViewCell.cellIdentifier, for: indexPath) as? RestaurantListCollectionViewCell else {fatalError("Unable deque cell...")}
             cell.cellData = restaurantListMockData[indexPath.row]
+            
             return cell
         }
     }
