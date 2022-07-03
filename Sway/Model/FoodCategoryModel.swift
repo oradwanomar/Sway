@@ -21,4 +21,11 @@ let foodCategoryMockData = [
     FoodCategoryModel(categoryName: "pocket friendly", categoryImage: "ic_pocket"),
     FoodCategoryModel(categoryName: "best sellers", categoryImage: "ic_bestseller"),
     FoodCategoryModel(categoryName: "newly launched", categoryImage: "ic_newlaunch"),
+    FoodCategoryModel(categoryName: "newly launched", categoryImage: "ic_newlaunch"),
+    FoodCategoryModel(categoryName: "newly launched", categoryImage: "ic_newlaunch"),
+    FoodCategoryModel(categoryName: "newly launched", categoryImage: "ic_newlaunch"),
+    FoodCategoryModel(categoryName: "newly launched", categoryImage: "ic_newlaunch"),
+    FoodCategoryModel(categoryName: "newly launched", categoryImage: "ic_newlaunch"),
+    FoodCategoryModel(categoryName: "newly launched", categoryImage: "ic_newlaunch"),
+
 ]
