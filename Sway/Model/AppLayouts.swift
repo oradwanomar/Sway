@@ -24,6 +24,7 @@ class AppLayouts {
         section.orthogonalScrollingBehavior = .groupPaging
         
         // PLay with some animation and scrollOffest
+        
         section.visibleItemsInvalidationHandler = { (items, offset, environment) in
             items.forEach { item in
                 let distanceFromCenter = abs((item.frame.midX - offset.x) - environment.container.contentSize.width / 2.0)
