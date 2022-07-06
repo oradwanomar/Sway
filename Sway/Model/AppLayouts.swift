@@ -85,7 +85,6 @@ class AppLayouts {
         
         section.boundarySupplementaryItems = [
             .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(100)), elementKind: "Header", alignment: .top),
-            .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(30)), elementKind: "Footer", alignment: .bottom)
         ]
          
         let decorationItem = NSCollectionLayoutDecorationItem.background(elementKind: "SectionBackground")

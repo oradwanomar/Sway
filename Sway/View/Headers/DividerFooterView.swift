@@ -34,7 +34,6 @@ class DividerFooterView: UICollectionReusableView {
             footer.trailingAnchor.constraint(equalTo: trailingAnchor),
             footer.heightAnchor.constraint(equalToConstant: 2),
             footer.centerYAnchor.constraint(equalTo: centerYAnchor),
-            
         ])
     }
     
