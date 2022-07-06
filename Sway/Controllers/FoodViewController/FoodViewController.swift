@@ -38,6 +38,9 @@ class FoodViewController: UIViewController {
         
         cv.register(FilterHeaderView.self, forSupplementaryViewOfKind: "Header", withReuseIdentifier: FilterHeaderView.headerIdentifier)
         cv.register(DividerFooterView.self, forSupplementaryViewOfKind: "Footer", withReuseIdentifier: DividerFooterView.footerIdentifier)
+        cv.register(VeganSectionHeaderView.self, forSupplementaryViewOfKind: "Header", withReuseIdentifier: VeganSectionHeaderView.headerIdentifier)
+        cv.register(RestaurantVeganCollectionViewCell.self, forCellWithReuseIdentifier: RestaurantVeganCollectionViewCell.cellIdentifier)
+        
         cv.backgroundColor = .systemBackground
         return cv
     }()
@@ -102,8 +105,10 @@ extension FoodViewController {
                 return AppLayouts.shared.foodBannerSection()
             case 1 :
                 return AppLayouts.shared.foodCategorySection()
-            default:
+            case 2 :
                 return AppLayouts.shared.restaurantsListSection()
+            default:
+                return AppLayouts.shared.VeganSectionLayout()
             }
         }
         layout.register(SectionDecorationView.self, forDecorationViewOfKind: "SectionBackground")
@@ -115,6 +120,4 @@ extension FoodViewController: FilterActionDelegate {
     func didTabFilterBTN() {
         print("Open Filter")
     }
-    
-    
 }

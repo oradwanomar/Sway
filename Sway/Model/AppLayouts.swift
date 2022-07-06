@@ -13,17 +13,17 @@ class AppLayouts {
     
     func foodBannerSection()-> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
-        let itemLayout = NSCollectionLayoutItem(layoutSize: itemSize)
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.7), heightDimension: .absolute(225))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [itemLayout])
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 15)
 
         let section = NSCollectionLayoutSection(group: group)
         section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 0)
         section.orthogonalScrollingBehavior = .groupPaging
         
-        // PLay with some animation and scrollOffest
+//         PLay with some animation and scrollOffest
         section.visibleItemsInvalidationHandler = { (items, offset, environment) in
             items.forEach { item in
                 let distanceFromCenter = abs((item.frame.midX - offset.x) - environment.container.contentSize.width / 2.0)
@@ -50,9 +50,6 @@ class AppLayouts {
         section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 0)
         section.orthogonalScrollingBehavior = .continuous
         
-//        let decorationItem = NSCollectionLayoutDecorationItem.background(elementKind: "SectionBackground")
-//        section.decorationItems = [decorationItem]
-        
         return section
     }
     
@@ -69,9 +66,30 @@ class AppLayouts {
         
         section.boundarySupplementaryItems = [
             .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(30)), elementKind: "Header", alignment: .top),
-            .init(layoutSize: .init(widthDimension: .fractionalWidth(0.5), heightDimension: .absolute(2)), elementKind: "Footer", alignment: .bottom)
+            .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(30)), elementKind: "Footer", alignment: .bottom)
             
         ]
+        
+        return section
+    }
+    
+    func VeganSectionLayout() -> NSCollectionLayoutSection {
+        let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
+        
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .absolute(170), heightDimension: .absolute(260)), subitems: [item])
+        group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 25)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 15, bottom: 60, trailing: -10)
+        section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
+        
+        section.boundarySupplementaryItems = [
+            .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(100)), elementKind: "Header", alignment: .top),
+            .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(30)), elementKind: "Footer", alignment: .bottom)
+        ]
+         
+        let decorationItem = NSCollectionLayoutDecorationItem.background(elementKind: "SectionBackground")
+        section.decorationItems = [decorationItem]
         
         return section
     }

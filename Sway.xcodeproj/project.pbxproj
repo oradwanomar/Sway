@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		852B258828755E2D003E1384 /* VeganRestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852B258728755E2D003E1384 /* VeganRestaurantModel.swift */; };
+		852B258A28755E8F003E1384 /* VeganSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852B258928755E8F003E1384 /* VeganSectionHeaderView.swift */; };
+		852B258C2875603A003E1384 /* RestaurantVeganCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852B258B2875603A003E1384 /* RestaurantVeganCollectionViewCell.swift */; };
 		858E14A9285AF54A00E1C1E1 /* FilterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858E14A8285AF54A00E1C1E1 /* FilterHeaderView.swift */; };
 		85E28164286D6A7E0087EEC1 /* AppLayouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E28163286D6A7E0087EEC1 /* AppLayouts.swift */; };
 		85E435B82857B88900052D42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E435B72857B88900052D42 /* AppDelegate.swift */; };
@@ -29,6 +32,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		852B258728755E2D003E1384 /* VeganRestaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeganRestaurantModel.swift; sourceTree = "<group>"; };
+		852B258928755E8F003E1384 /* VeganSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeganSectionHeaderView.swift; sourceTree = "<group>"; };
+		852B258B2875603A003E1384 /* RestaurantVeganCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantVeganCollectionViewCell.swift; sourceTree = "<group>"; };
 		858E14A8285AF54A00E1C1E1 /* FilterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHeaderView.swift; sourceTree = "<group>"; };
 		85E28163286D6A7E0087EEC1 /* AppLayouts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLayouts.swift; sourceTree = "<group>"; };
 		85E435B42857B88900052D42 /* Sway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sway.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +126,7 @@
 				85E435D82857CFC100052D42 /* FoodTopBannerModel.swift */,
 				85E435DC2858288100052D42 /* FoodCategoryModel.swift */,
 				85E435E02858350700052D42 /* RestaurantListModel.swift */,
+				852B258728755E2D003E1384 /* VeganRestaurantModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,6 +155,7 @@
 				85E435DA2857D05000052D42 /* FoodTopBannerCollectionViewCell.swift */,
 				85E435DE285828E300052D42 /* FoodCategoryCollectionViewCell.swift */,
 				85E435E22858377800052D42 /* RestaurantListCollectionViewCell.swift */,
+				852B258B2875603A003E1384 /* RestaurantVeganCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -158,6 +166,7 @@
 				858E14A8285AF54A00E1C1E1 /* FilterHeaderView.swift */,
 				85F053E1285B064D00A4D5BC /* DividerFooterView.swift */,
 				85F053E3285B0A6200A4D5BC /* SectionDecorationView.swift */,
+				852B258928755E8F003E1384 /* VeganSectionHeaderView.swift */,
 			);
 			path = Headers;
 			sourceTree = "<group>";
@@ -240,9 +249,12 @@
 				85E435B82857B88900052D42 /* AppDelegate.swift in Sources */,
 				85E435D52857C52300052D42 /* UIButton + Extention.swift in Sources */,
 				85E435D32857C1FE00052D42 /* UIView + Extention.swift in Sources */,
+				852B258828755E2D003E1384 /* VeganRestaurantModel.swift in Sources */,
 				85E435DD2858288100052D42 /* FoodCategoryModel.swift in Sources */,
+				852B258C2875603A003E1384 /* RestaurantVeganCollectionViewCell.swift in Sources */,
 				85E435BA2857B88900052D42 /* SceneDelegate.swift in Sources */,
 				85E435DF285828E300052D42 /* FoodCategoryCollectionViewCell.swift in Sources */,
+				852B258A28755E8F003E1384 /* VeganSectionHeaderView.swift in Sources */,
 				85E435D92857CFC100052D42 /* FoodTopBannerModel.swift in Sources */,
 				85E435E32858377800052D42 /* RestaurantListCollectionViewCell.swift in Sources */,
 				85F053E2285B064D00A4D5BC /* DividerFooterView.swift in Sources */,
