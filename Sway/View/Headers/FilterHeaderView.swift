@@ -11,6 +11,8 @@ protocol FilterActionDelegate: AnyObject {
     func didTabFilterBTN()
 }
 
+
+
 class FilterHeaderView: UICollectionReusableView {
     
     //MARK: Properities
