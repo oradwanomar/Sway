@@ -25,6 +25,8 @@ class RestaurantVeganCollectionViewCell: UICollectionViewCell {
         let img = UIImageView()
         img.translatesAutoresizingMaskIntoConstraints = false
         img.contentMode = .scaleAspectFill
+        img.clipsToBounds = true
+        img.layer.cornerRadius = 20
         return img
     }()
     
@@ -33,7 +35,7 @@ class RestaurantVeganCollectionViewCell: UICollectionViewCell {
         l.translatesAutoresizingMaskIntoConstraints = false
         l.text = "Restaurant Name"
         l.font = UIFont.systemFont(ofSize: 15, weight: .bold)
-        l.textColor = .black
+        l.textColor = .label
         l.textAlignment = .center
         return l
     }()
@@ -41,7 +43,7 @@ class RestaurantVeganCollectionViewCell: UICollectionViewCell {
     let dividerView: UIView = {
         let v = UIView()
         v.translatesAutoresizingMaskIntoConstraints = false
-        v.backgroundColor = .black
+        v.backgroundColor = .label
         return v
     }()
     

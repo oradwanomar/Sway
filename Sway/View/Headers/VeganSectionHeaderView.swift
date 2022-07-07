@@ -16,7 +16,7 @@ class VeganSectionHeaderView: UICollectionReusableView {
     let title: UILabel = {
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
-        l.textColor = .black
+        l.textColor = .label
         l.text = "vegetarian meals".uppercased()
         l.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         l.textAlignment = .center
@@ -44,7 +44,7 @@ class VeganSectionHeaderView: UICollectionReusableView {
     
     func setUpConstraints(){
         NSLayoutConstraint.activate([
-            title.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
+            title.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25),
             title.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
             title.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])

@@ -20,8 +20,8 @@ class AppLayouts {
         group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 15)
 
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 0)
-        section.orthogonalScrollingBehavior = .groupPaging
+        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0)
+        section.orthogonalScrollingBehavior = .groupPagingCentered
         
 //         PLay with some animation and scrollOffest
         section.visibleItemsInvalidationHandler = { (items, offset, environment) in
