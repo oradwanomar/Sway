@@ -12,7 +12,6 @@ protocol FilterActionDelegate: AnyObject {
 }
 
 
-
 class FilterHeaderView: UICollectionReusableView {
     
     //MARK: Properities
