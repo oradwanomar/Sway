@@ -15,8 +15,7 @@ class FoodTopBannerCollectionViewCell: UICollectionViewCell {
     
     var cellData : FoodTopBannerModel? {
         didSet {
-            guard let cellData = cellData else {
-return}
+            guard let cellData = cellData else {return}
             bannerImage.image = UIImage(named: cellData.image)
         }
     }
